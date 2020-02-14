@@ -1,8 +1,7 @@
-FROM centos:centos7
+FROM ronaldkan/akana-base:latest
 
-COPY opt /opt/
 WORKDIR /usr/src/app
-COPY cm/entrypoint.sh /usr/src/app/
+COPY controlplane/entrypoint.sh /usr/src/app/
 RUN chmod 755 entrypoint.sh
 EXPOSE 9900
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]

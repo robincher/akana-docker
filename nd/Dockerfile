@@ -1,6 +1,5 @@
-FROM centos:centos7
+FROM ronaldkan/akana-base:latest
 
-COPY opt /opt/
 WORKDIR /usr/src/app
 COPY nd/entrypoint.sh /usr/src/app/
 RUN chmod 755 entrypoint.sh
