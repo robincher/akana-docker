@@ -5,4 +5,4 @@ sed -i "s/{hostname}/nd-$HOSTNAME/g" /opt/installer/register-container.propertie
 ps -ef | grep [j]ava | awk '{print $2}' | xargs kill -9
 sleep 10
 /opt/akana/bin/jython.sh -Dorg.slf4j.simpleLogger.logFile=System.out -m akana.container --recipe /opt/akana/recipes/register-container.json --props /opt/installer/register-container.properties
-/opt/akana/bin/startup.sh nd-`echo $HOSTNAME` &
+/opt/akana/bin/startup.sh nd-`echo $HOSTNAME`
